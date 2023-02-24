@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+import 'package:social_network_test_flutter_firebase/Auth/register_email_section.dart';
+import 'package:social_network_test_flutter_firebase/Auth/sign_in_email_password_section.dart';
 import 'package:social_network_test_flutter_firebase/allConstants/all_constants.dart';
 import 'package:social_network_test_flutter_firebase/allWidgets/custom_button.dart';
 import 'package:social_network_test_flutter_firebase/allWidgets/custom_image_view.dart';
@@ -218,7 +220,13 @@ class _LoginPageState extends State<LoginPage> {
                                             color: AppColors.blueGray1006c)))
                               ])),
                       CustomButton(
-                          onTap: () => {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const RegisterEmailSection()));
+                          },
                           height: getVerticalSize(48),
                           text: "Sign up within mail",
                           margin: getMargin(left: 24, top: 27, right: 24),
@@ -228,7 +236,13 @@ class _LoginPageState extends State<LoginPage> {
                           padding: getPadding(top: 20, bottom: 5),
                           child: Center(
                             child: MaterialButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const EmailPasswordForm()));
+                              },
                               child: Text("Existing account? Log in",
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.left,
