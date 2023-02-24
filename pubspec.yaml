@@ -50,6 +50,8 @@ dependencies:
   url_launcher: ^6.0.20
   equatable: ^2.0.3
   country_code_picker: ^2.0.2
+  flutter_svg: ^2.0.2
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:
